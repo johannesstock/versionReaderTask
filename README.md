@@ -21,5 +21,5 @@ The value entered here will be prefixed to each variable name generated. This ca
 
 ## Credits
 This work is basically a mashup of those two projects:
--[versionReaderTask](https://github.com/conficient/versionReaderTask) with thanks to [conficient](https://github.com/conficient)
--[AssemblyInfoReaderTask](https://github.com/kyleherzog/AssemblyInfoReaderTask) with thanks to [kyleherzog](https://github.com/kyleherzog)
+* [versionReaderTask](https://github.com/conficient/versionReaderTask) with thanks to [conficient](https://github.com/conficient)
+* [AssemblyInfoReaderTask](https://github.com/kyleherzog/AssemblyInfoReaderTask) with thanks to [kyleherzog](https://github.com/kyleherzog)

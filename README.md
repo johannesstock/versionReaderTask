@@ -3,7 +3,7 @@ VSTS build task to read Version tag from project files
 
 Reads the `<Version>` tag from new `csproj` and `vbproj` 2017 format files into environment variables
 
-##Generated Variables
+## Generated Variables
 
 * Version = Whole Version Tag - Example: 4.3.2.1
 * Version.Major = First Number of Version Tag  - Example: 4

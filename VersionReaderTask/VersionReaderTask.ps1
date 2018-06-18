@@ -20,6 +20,33 @@ function SetVersionVariables([xml]$xml)
 {
     $version = $xml.Project.PropertyGroup.Version
 	SetBuildVariable "Version" $version
+    $versionMatch = [regex]::Match( $version, "(\d+)\.?(\d+)?\.?(\d+)?\.?(\d+)?")
+    if ($versionMatch.Success)
+    {
+        if ($versionMatch.Groups[1].Success)
+        {
+            $major = $versionMatch.Groups[1].Value
+            SetBuildVariable "Version.Major" $major
+
+            if ($versionMatch.Groups[2].Success)
+            {
+                $minor = $versionMatch.Groups[2].Value
+                SetBuildVariable "Version.Minor" $minor
+
+                if ($versionMatch.Groups[3].Success)
+                {
+                    $build = $versionMatch.Groups[3].Value
+                    SetBuildVariable "Version.Build" $build
+
+                    if ($versionMatch.Groups[4].Success)
+                    {
+                        $revision = $versionMatch.Groups[4].Value
+                        SetBuildVariable "Version.Revision" $release
+                    }
+                }
+            }
+        }
+    }
 }
 
 $filesFound = Get-ChildItem -Path $searchPattern -Recurse
